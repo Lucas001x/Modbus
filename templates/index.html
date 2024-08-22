@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODSENSE</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename= 'img/soundcloud.png') }}">
+
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho fixo -->
+    <header class="cabecalho">
+        <nav class="bar-nav d-flex align-items-center justify-content-between px-4 py-2 bg-dark text-white">
+            <img src="/static/img/logo_ifes.png" id="logo-header" class="me-2">
+            <div id="conjunto_titulo" class="d-flex align-items-center">
+                <img src="/static/img/objeto.png" id="MODSENSE">
+                <div id="titulo" class="fs-3">MODSENSE</div>
+            </div>
+            <div class="letra-nav text-end">CRIADO POR: Lucas Cesar de Arruda. <br>ORIENTADOR: Dr. Rogerio Passos do Amaral Pereira</div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <span data-feather="home"></span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Relatórios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                Produtos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Clientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Relatórios de vendas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span>
+                                Integrações
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Corpo do dashboard -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 corpo-primario">
+                <div class="container dashboard-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-box tensao_box">
+                                <h1 class="titulo">TENSÃO: <span id="tensao"></span>V</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-box corrente_box">
+                                <h1 class="titulo">CORRENTE: <span id="corrente"></span>A</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-box potencia_box">
+                                <h1 class="titulo">POTÊNCIA: <span id="potencia"></span>W</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="info-box alerta_box">
+                                <h1 class="titulo" id="alerta"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function atualizarValores() {
+                fetch('/atualizar_valores')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('tensao').innerText = data.tensao;
+                        document.getElementById('corrente').innerText = data.corrente;
+                        document.getElementById('potencia').innerText = data.potencia;
+                        document.getElementById('alerta').innerText = data.alerta;
+                    })
+                    .catch(error => {
+                        console.error('Erro ao recuperar os valores:', error);
+                    });
+            }
+
+            setInterval(atualizarValores, 500);
+            atualizarValores();
+        });
+    </script>
+</body>
+</html>
