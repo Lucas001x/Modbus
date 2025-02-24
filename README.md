@@ -10,38 +10,38 @@ Por ser baseado em uma arquitetura de baixo custo e open-source, este projeto po
 
 ## ✨ Funcionalidades
 ✔️ Monitoramento em tempo real da produção de energia solar <br>
-✔️ Armazenamento de dados em banco de dados para consultas futuras
-✔️ Dashboard interativo acessível via navegador, dentro da rede local
-✔️ Gráficos detalhados da potência gerada ao longo do tempo
-✔️ Filtros por data para análise de períodos específicos
-✔️ Emissão de relatórios para acompanhamento e auditoria
-✔️ Alertas configuráveis para valores anormais de tensão ou corrente
-✔️ Suporte a múltiplas Raspberry Pi, permitindo escalabilidade
-✔️ Interface responsiva, compatível com dispositivos móveis
-✔️ Possibilidade de integração com outros dispositivos IoT
+✔️ Armazenamento de dados em banco de dados para consultas futuras <br>
+✔️ Dashboard interativo acessível via navegador, dentro da rede local <br>
+✔️ Gráficos detalhados da potência gerada ao longo do tempo <br>
+✔️ Filtros por data para análise de períodos específicos<br>
+✔️ Emissão de relatórios para acompanhamento e auditoria<br>
+✔️ Alertas configuráveis para valores anormais de tensão ou corrente<br>
+✔️ Suporte a múltiplas Raspberry Pi, permitindo escalabilidade<br>
+✔️ Interface responsiva, compatível com dispositivos móveis<br>
+✔️ Possibilidade de integração com outros dispositivos IoT<br>
 
 ## 🛠 Tecnologias Utilizadas
-Este projeto combina diversas tecnologias para garantir desempenho, escalabilidade e facilidade de uso:
+Este projeto combina diversas tecnologias para garantir desempenho, escalabilidade e facilidade de uso:<br>
 
-Python → Responsável pela leitura dos sensores e processamento dos dados
-C++ → Utilizado para otimizar a comunicação com o módulo Modbus
-SQLite/MySQL → Banco de dados para armazenamento seguro das medições
-Flask/FastAPI → Framework para criação do servidor web
-HTML, CSS e JavaScript → Construção do dashboard interativo
-Chart.js / Plotly → Geração dos gráficos dinâmicos
-Além disso, seguimos práticas recomendadas de acessibilidade e responsividade, garantindo que o sistema seja funcional em computadores, tablets e smartphones.
+Python → Responsável pela leitura dos sensores e processamento dos dados<br>
+C++ → Utilizado para otimizar a comunicação com o módulo Modbus<br>
+SQLite/MySQL → Banco de dados para armazenamento seguro das medições<br>
+Flask/FastAPI → Framework para criação do servidor web<br>
+HTML, CSS e JavaScript → Construção do dashboard interativo<br>
+Chart.js / Plotly → Geração dos gráficos dinâmicos<br>
+Além disso, seguimos práticas recomendadas de acessibilidade e responsividade, garantindo que o sistema seja funcional em computadores, tablets e smartphones.<br>
 
 ## 📌 Aplicações e Possibilidades
-Este sistema foi projetado pensando na flexibilidade e na escalabilidade. Apesar de ter sido desenvolvido para monitoramento de placas solares, ele pode ser adaptado para diversas outras aplicações, como:
+Este sistema foi projetado pensando na flexibilidade e na escalabilidade. Apesar de ter sido desenvolvido para monitoramento de placas solares, ele pode ser adaptado para diversas outras aplicações, como:<br>
 
-Monitoramento de baterias e sistemas de armazenamento de energia
-Supervisão de máquinas e equipamentos industriais
-Controle de consumo elétrico em residências ou empresas
-Qualquer aplicação que exija leitura e análise de tensão e corrente
-Além disso, com a possibilidade de integração com outros dispositivos IoT, este projeto pode evoluir para um sistema ainda mais robusto e automatizado.
+Monitoramento de baterias e sistemas de armazenamento de energia<br>
+Supervisão de máquinas e equipamentos industriais<br>
+Controle de consumo elétrico em residências ou empresas<br>
+Qualquer aplicação que exija leitura e análise de tensão e corrente<br>
+Além disso, com a possibilidade de integração com outros dispositivos IoT, este projeto pode evoluir para um sistema ainda mais robusto e automatizado.<br>
 
 ## 🤝 Contribuições
-Se você deseja contribuir com melhorias para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request! Qualquer sugestão para otimização do código, melhorias na interface do dashboard ou novas funcionalidades são bem-vindas.
+Se você deseja contribuir com melhorias para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request! Qualquer sugestão para otimização do código, melhorias na interface do dashboard ou novas funcionalidades são bem-vindas.<br>
 
-Caso tenha alguma dúvida ou precise de suporte, entre em contato através da aba de discussões do repositório.
+Caso tenha alguma dúvida ou precise de suporte, entre em contato através da aba de discussões do repositório.<br>
 
