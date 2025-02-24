@@ -9,7 +9,7 @@ Os dados coletados são processados e exibidos em um dashboard interativo, permi
 Por ser baseado em uma arquitetura de baixo custo e open-source, este projeto pode ser facilmente adaptado para diferentes aplicações, incluindo monitoramento de outras fontes de energia ou dispositivos industriais.
 
 ## ✨ Funcionalidades
-✔️ Monitoramento em tempo real da produção de energia solar
+✔️ Monitoramento em tempo real da produção de energia solar <br>
 ✔️ Armazenamento de dados em banco de dados para consultas futuras
 ✔️ Dashboard interativo acessível via navegador, dentro da rede local
 ✔️ Gráficos detalhados da potência gerada ao longo do tempo
